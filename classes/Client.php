@@ -155,7 +155,7 @@ class Client {
         if (isset($data['PAGAMENTO']))
             $this->pagamento = trim($data['PAGAMENTO']);
         if (isset($data['IndirizziAlt']))
-            $this->indirizziAlt = trim($data['IndirizziAlt']);
+            $this->indirizziAlt =  preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", " ", trim($data['IndirizziAlt']));
         if (isset($data['CATEGORIA']))
             $this->categoria = trim($data['CATEGORIA']);
 

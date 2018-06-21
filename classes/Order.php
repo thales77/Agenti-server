@@ -144,7 +144,7 @@ class Order {
         if (isset($data['CODART']))
             $this->codArt = trim($data['CODART']);
         if (isset($data['DESCART']))
-            $this->descArt = trim($data['DESCART']);
+            $this->descArt = preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", " ", trim($data['DESCART']));
         if (isset($data['UM1']))
             $this->um = trim($data['UM1']);
         if (isset($data['StatoRiga']))

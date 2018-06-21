@@ -118,7 +118,7 @@ class Item {
         if (isset($data['CodiceArticolo']))
             $this->codiceArticolo = trim($data['CodiceArticolo']);
         if (isset($data['DescrizioneArticolo']))
-            $this->descrizione = trim($data['DescrizioneArticolo']);
+            $this->descrizione =  preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", " ", trim($data['DescrizioneArticolo']));
         if (isset($data['CodiceAlternativo1']))
             $this->codForn1 = trim($data['CodiceAlternativo1']);
         if (isset($data['CodiceAlternativo2']))

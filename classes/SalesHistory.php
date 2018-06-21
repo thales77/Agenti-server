@@ -68,7 +68,7 @@ class SalesHistory {
             $this->codiceArticolo = $data['CodArt'];
 
         if (isset($data['DescArt']))
-            $this->DescArt = $data['DescArt'];
+            $this->DescArt =  preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", " ", $data['DescArt']);
 
         if (isset($data['Prezzo_medio']))
             $this->prezzoMedio = str_replace(".", ",", $data['Prezzo_medio']);

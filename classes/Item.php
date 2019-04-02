@@ -315,7 +315,7 @@ class Item {
                                      COALESCE(sum(Giacenze.GIACENZA),0) as DispTotale
                                      FROM Listini_Norm 
                                      LEFT JOIN Listini_Prom ON Listini_Norm.CodiceArticolo = Listini_Prom.CodiceArticolo
-                                     LEFT JOIN Listini_Pers ON Listini_Norm.CodiceArticolo = Listini_Pers.CodiceArticolo AND Listini_Pers.CodListino = 50
+                                     LEFT JOIN Listini_Pers ON Listini_Norm.CodiceArticolo = Listini_Pers.CodiceArticolo AND Listini_Pers.CodListino = 89
                                      LEFT JOIN Giacenze ON Listini_Norm.CodiceArticolo = Giacenze.CODART
                                      WHERE Listini_Norm.CodiceArticolo = :codiceArticolo
                                      AND Listini_Norm.FasciaSconto = :fasciaSconto");
@@ -374,7 +374,7 @@ class Item {
                                     FROM
                                     Listini_Norm
                                     LEFT JOIN Listini_Prom ON Listini_Norm.CodiceArticolo = Listini_Prom.CodiceArticolo
-                                    LEFT JOIN Listini_Pers ON Listini_Norm.CodiceArticolo = Listini_Pers.CodiceArticolo AND Listini_Pers.CodListino = 50
+                                    LEFT JOIN Listini_Pers ON Listini_Norm.CodiceArticolo = Listini_Pers.CodiceArticolo AND Listini_Pers.CodListino = 89
                                     LEFT JOIN Giacenze ON Listini_Norm.CodiceArticolo = Giacenze.CODART
                                     INNER JOIN Barcode ON Barcode.CodArt = Listini_Norm.CodiceArticolo
                                     WHERE Barcode.CodBarre = :barcode
